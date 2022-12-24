@@ -4,6 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 require("dotenv").config({ path: "../.env" });
+require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 
 mongoose
