@@ -98,6 +98,9 @@ def show_data():
    
 
 
+# we have to create a function to get the data from the database and check if the data is need to be updated or not 
+
+
 
 async def scrape(session, url, rollno, retries):
     try:
@@ -161,12 +164,13 @@ async def save_result(mongoDB, batch, data, save_mongo):
 
     if save_mongo:
         
-        mongoCol = mongoDB["RESULT_SHORT"].drop()
+        # mongoCol = mongoDB["RESULT_SHORT"].drop()
+
         mongoCol = mongoDB["RESULT_SHORT"]
         mongoCol.insert_many(data)
        
         
-        mongoCol = mongoDB["RESULT_LONG"].drop()
+        # mongoCol = mongoDB["RESULT_LONG"].drop()
         mongoCol = mongoDB["RESULT_LONG"]
         mongoCol.insert_many(results)
        

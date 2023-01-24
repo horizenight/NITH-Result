@@ -33,7 +33,7 @@ module.exports.getByID = async function (req, res) {
   // console.log( req.params.studentID)
   let data = await ResultLong.findOne(
     {
-      "results._id" :  req.params.studentID
+      "_id" :  req.params.studentID
     }
   )
 
