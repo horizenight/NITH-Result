@@ -13,8 +13,10 @@ To get the script running locally:
 - Create a `.env` file in the root directory and add the following environment variables:
 
   ```{.sourceCode .bash}
-  MONGO_URL=<--Mongo URL-->
-  MONGO_DB=<--Mongo Database Name-->
+  export MONGO_URL="mongodb+srv://horizenight:Ramrambro@nithresultdb.jhqelre.mongodb.net/?retryWrites=true&w=majority"
+
+
+  export MONGO_DB="NithResultdb"
   ```
 - `cd scraper` to go to the scraper directory
 - `pip install -r requirements.txt` to install all required dependencies

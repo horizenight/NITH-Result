@@ -1,3 +1,5 @@
+const { json } = require("body-parser");
+
 const ResultLong = require("./models").ResultLong;
 const ResultShort = require("./models").ResultShort;
 
@@ -24,11 +26,18 @@ module.exports.getResults = async function (req, res) {
   });
 };
 
-module.exports.getByID = async function (req, res) {
-  let data = await ResultLong.findOne({
-    _id: req.params.studentID,
-  });
 
+module.exports.getByID = async function (req, res) {
+
+ 
+  // console.log( req.params.studentID)
+  let data = await ResultLong.findOne(
+    {
+      "results._id" :  req.params.studentID
+    }
+  )
+
+  console.log(data["results"]);
   if (data) return res.status(200).json(data);
   return res.status(404).json({
     message: "Requested data not found",

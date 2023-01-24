@@ -11,9 +11,10 @@ To get the Node server running locally:
 
   ```{.sourceCode .bash}
   PORT=3000
-  MONGO_URL=<--Mongo URL-->
-  MONGO_DB=<--Mongo Database Name-->
+  MONGO_URL="mongodb+srv://horizenight:Ramrambro@nithresultdb.rpfryyd.mongodb.net/?retryWrites=true&w=majority"
+  MONGO_DB="NithResultdb"
   ```
 - `npm install` to install all required dependencies
 - `npm run dev` to start the local server
 
+<!-- Need to write how to use api  -->
